@@ -17,26 +17,6 @@ It combines privacy-preserving camera monitoring, activity recognition, daily re
 - Official Housing Society Elderly Resources Centre lookup
 - Shared care-group concept for older adults, family, and caregivers
 
-## Product Screens
-
-### Overview
-
-![ElderCare overview](docs/screenshots/overview.png)
-
-### Reports
-
-![ElderCare daily reports](docs/screenshots/reports.png)
-
-### Care Agent
-
-![ElderCare Care Agent](docs/screenshots/agent.png)
-
-### Shared Care Group Settings
-
-![ElderCare shared care group settings](docs/screenshots/settings-care-group.png)
-
-Screenshots are captured from the local product prototype with identifying data excluded.
-
 ## Architecture
 
 ```mermaid
@@ -58,21 +38,23 @@ See [`docs/architecture.md`](docs/architecture.md) for the detailed data flow.
 
 ## Core Workflows
 
-### Monitoring
+### Monitoring and Events
 
-Camera frames are processed for activity understanding and privacy-aware visualization. The interface presents routine events separately from urgent or warning events.
+<table><tr><td width="46%"><img src="docs/screenshots/overview.png" alt="ElderCare monitoring overview"></td><td>Camera status, privacy-aware monitoring, daily routine events, and attention levels are shown in one overview. Routine activity is separated from urgent and warning events so families can focus on what needs follow-up.</td></tr></table>
 
-### Care Agent
+### Daily Reports
 
-The Agent combines recent care context, local care knowledge, and official Housing Society Elderly Resources Centre information when relevant. Official web lookup is restricted to approved sources and is used for current activities, services, visit information, and related resources.
+<table><tr><td width="46%"><img src="docs/screenshots/reports.png" alt="ElderCare daily report"></td><td>The completed day's report is finalized at 23:59. It includes activity volume, category proportions, common activities, attention levels, and the recorded time range. Before the current day is complete, the previous completed report remains visible.</td></tr></table>
 
-### Daily Report
+### Care Agent and Knowledge Retrieval
 
-A completed daily report is generated at 23:59. Before the current day is complete, the Reports view shows the latest completed day's report rather than an empty partial report. The report includes activity volume, category proportions, common activities, attention levels, and the recorded time range.
+<table><tr><td width="46%"><img src="docs/screenshots/agent.png" alt="ElderCare Care Agent"></td><td>The Care Agent answers practical care questions, summarizes activity, and combines local RAG knowledge with official Housing Society Elderly Resources Centre lookup when current resource information is needed.</td></tr></table>
 
 ### Shared Care Group
 
-The product is designed for a shared care circle. An older adult can be supported by family members and caregivers who share access to the same home-safety context, events, and daily reports.
+<table><tr><td width="46%"><img src="docs/screenshots/settings-care-group.png" alt="ElderCare shared care group settings"></td><td>An older adult, family members, and caregivers can share one care circle. Group management provides a place for membership, access, shared updates, and family invitations.</td></tr></table>
+
+Screenshots are captured from the local product prototype with identifying data excluded.
 
 ## Privacy and Safety
 
