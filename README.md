@@ -19,11 +19,23 @@ It combines privacy-preserving camera monitoring, activity recognition, daily re
 
 ## Product Screens
 
-| Overview | Events | Reports | Care Agent |
-| --- | --- | --- | --- |
-| Camera status and recent events | Activity history and attention levels | Daily summary and category profile | Care guidance and resource lookup |
+### Overview
 
-Screenshots and visual assets are catalogued under [`docs/screenshots`](docs/screenshots).
+![ElderCare overview](docs/screenshots/overview.png)
+
+### Reports
+
+![ElderCare daily reports](docs/screenshots/reports.png)
+
+### Care Agent
+
+![ElderCare Care Agent](docs/screenshots/agent.png)
+
+### Shared Care Group Settings
+
+![ElderCare shared care group settings](docs/screenshots/settings-care-group.png)
+
+Screenshots are captured from the local product prototype with identifying data excluded.
 
 ## Architecture
 
