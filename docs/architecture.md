@@ -14,9 +14,11 @@ flowchart TD
     E --> G[Care context]
     G --> H[Care Agent]
     I[Family or caregiver query] --> H
-    H --> J[Local RAG knowledge]
+    H --> J[Official care knowledge\nlocal RAG]
     H --> K[Official ERC information]
     H --> L[Shared care group]
+    classDef agent fill:#ff4d5a,stroke:#ff9aa0,color:#0b0b0d,stroke-width:4px;
+    class H agent;
 ```
 
 ## Data Flow
