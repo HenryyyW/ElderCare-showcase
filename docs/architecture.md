@@ -6,15 +6,15 @@ ElderCare is organized around a continuous camera pipeline, a local activity rec
 
 ```mermaid
 flowchart TD
-    I[Family or caregiver query] --> H[Care Agent]
     A[Camera source] --> B[Pose and privacy layer]
     A --> C[Activity recognition]
     C --> E[Activity records]
     E --> H
     E --> F[Completed daily report]
-    H --> J[Official care knowledge<br/>local RAG]
-    H --> K[Official ERC information]
-    H --> L[Shared care group]
+    I[Older adult / family / caregiver query] --> H[Care Agent]
+    J[Official care knowledge<br/>local RAG] --> H
+    K[Official ERC information] --> H
+    H --> L[Answer to shared care group]
     classDef agent fill:#ff4d5a,stroke:#ff9aa0,color:#0b0b0d,stroke-width:4px;
     class H agent;
 ```
