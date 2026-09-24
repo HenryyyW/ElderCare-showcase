@@ -18,14 +18,14 @@ Its Care Agent combines privacy-preserving camera monitoring, activity recogniti
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
+    User[Older adult / family / caregiver] --> Agent[Care Agent]
     Camera[Camera stream] --> Privacy[Pose visualization only]
     Camera --> Activity[Activity recognition]
     Activity --> Records[(Daily activity records)]
+    Records --> Agent
     Records --> Reports[Completed daily report]
-    Records --> Agent[Care Agent]
-    User[Older adult / family / caregiver] --> Agent
-    Agent --> RAG[Official care knowledge\nlocal RAG]
+    Agent --> RAG[Official care knowledge<br/>local RAG]
     Agent --> ERC[Official ERC information]
     Agent --> Shared[Shared care group]
     classDef agent fill:#ff4d5a,stroke:#ff9aa0,color:#0b0b0d,stroke-width:4px;
