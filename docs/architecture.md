@@ -2,7 +2,7 @@
 
 ## System Context
 
-ElderCare is organized around a continuous camera pipeline, a local activity record store, and a conversational care layer.
+ElderCare is organized around a continuous camera pipeline, a local activity record store, and an Agent-centered care layer.
 
 ```mermaid
 flowchart TD
@@ -13,9 +13,9 @@ flowchart TD
     E --> F[Daily report]
     E --> G[Care context]
     G --> H[Care Agent]
-    I[Family or caregiver question] --> H
+    I[Family or caregiver query] --> H
     H --> J[Local RAG knowledge]
-    H --> K[Official ERC web tool]
+    H --> K[Official ERC information]
     H --> L[Shared care group]
 ```
 
@@ -25,10 +25,10 @@ flowchart TD
 2. Pose estimation creates a privacy-aware visual representation.
 3. Activity recognition classifies observed routines and safety-related events.
 4. Activity records are stored locally with timestamps and levels.
-5. At 23:59, the current day becomes a completed daily report.
+5. The reporting layer keeps the latest completed daily report available between daily updates.
 6. The Care Agent receives compact daily statistics rather than an unbounded raw event list.
 7. Local RAG supplies stable care guidance.
-8. The official ERC web tool supplies current Housing Society resource information when a question requires it.
+8. Official ERC resources supply current Housing Society information when a query requires it.
 9. Family members and caregivers access the shared care context through the product interface.
 
 ## Report Categories
@@ -43,9 +43,9 @@ The reporting layer groups events into:
 
 The UI presents category proportions as a donut chart and provides a readable daily summary.
 
-## Web Tool Boundary
+## Official Resource Boundary
 
-The ERC lookup is intentionally restricted to official Housing Society domains. It uses short-lived caching, request timeouts, and source URLs so that current information can be distinguished from local knowledge.
+ERC resource retrieval is intentionally restricted to official Housing Society domains. It uses short-lived caching, request timeouts, and source URLs so current official information can be distinguished from local knowledge.
 
 ## Resource Constraints
 

@@ -25,7 +25,9 @@ Reports summarize the latest completed day and include:
 
 ## Care Agent
 
-The Agent can summarize daily activity, answer practical care questions, and use citations when information comes from local care knowledge or official ERC pages.
+The Agent is the primary interaction layer. It can summarize daily activity, answer practical care queries, and cite local care knowledge or official ERC pages.
+
+The Agent safety boundary avoids exposing private information, avoids unsupported medical claims, escalates emergencies, and states uncertainty when official information is unavailable.
 
 ## Shared Care Group
 

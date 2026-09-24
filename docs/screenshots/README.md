@@ -1,6 +1,6 @@
 # Screenshots
 
-These screenshots are captured from the local ElderCare product prototype.
+These screenshots show the ElderCare product experience.
 
 Recommended files:
 
@@ -10,6 +10,3 @@ Recommended files:
 - `agent.png` - Care Agent conversation
 - `settings-care-group.png` - shared family care-group settings
 
-The screenshots show the product UI only. No application source code, model files, credentials, or database records are included in this repository.
-
-Before adding screenshots, remove faces, names, addresses, camera URLs, API endpoints, tokens, and personal activity records.
