@@ -8,6 +8,7 @@ Its Care Agent combines privacy-preserving camera monitoring, activity recogniti
 
 - Camera monitoring with pose visualization only, keeping the visible person private while preserving movement context
 - Daily activity timeline for normal routines and safety events
+- Longitudinal event memory that compares today's activity with recent behavior trends
 - Instant notifications for urgent and warning events
 - Daily reports with activity category proportions
 - Care Agent for queries, summaries, and practical guidance
@@ -22,8 +23,10 @@ flowchart TD
     Camera[Camera stream] --> Privacy[Pose visualization only]
     Camera --> Activity[Activity recognition]
     Activity --> Records[(Daily activity records)]
+    Records --> Trend[Longitudinal trend memory]
     Records --> Agent
     Records --> Reports[Completed daily report]
+    Trend --> Agent
     User[Older adult / family / caregiver<br/>care query] --> Agent[Care Agent]
     RAG[Official care knowledge<br/>local RAG] --> Agent
     ERC[Official ERC information] --> Agent
@@ -39,6 +42,10 @@ See [`docs/architecture.md`](docs/architecture.md) for the detailed data flow.
 ### Monitoring and Events
 
 <table><tr><td width="46%"><img src="docs/screenshots/overview.png" alt="ElderCare monitoring overview"></td><td>Camera status, privacy-aware monitoring, daily routine events, and attention levels are shown in one overview. Routine activity is separated from urgent and warning events so families can focus on what needs follow-up.</td></tr></table>
+
+### Events and Longitudinal Trends
+
+<table><tr><td width="46%"><img src="docs/screenshots/events.png" alt="ElderCare events tab with longitudinal trend memory"></td><td>The Events page keeps the latest detected activities visible while adding longitudinal trend memory. It compares today's activity with recent daily records, highlighting changes such as lower active time, increased night activity, or more warning events.</td></tr></table>
 
 ### Daily Reports
 
